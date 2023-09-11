@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Meta Tag -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title -->
+    <title>Weather Forecast 1.0</title>
+
+    <!-- Custome CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Bootstrap 5 mini CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="bg_design shadow text-center">
+       
+        <!-- Search Bar For All Devices -->
+        <form action="/submit" method="post">
+            <input name="location" class="search_bar shadow" type="text" placeholder="Enter Location">
+        </form>
+
+        <!-- Location Not Found Message -->
+        <div class="msg_div">
+            <p class="msg" style="color: red;"><%=msg%></p>
+        </div>
+
+        <!-- Computer Nav Bar -->
+        <div class="lg_navbar_div d-none d-lg-block text-center shadow">
+            <a class="lg_menu" href="/error">Help</a>
+            <a class="lg_menu" href="/error">About</a>
+            <a class="lg_menu" href="/error">Contact</a>
+        </div>
+        <div class="left_div d-none d-lg-block">
+            <img class="weather_icon" src="<%=icon%>" alt="weather_icon" onerror="this.style.display='none'">
+            <h4 class="white_color" style="font-size: 35px;"><%=description%></h4>
+            <h1 class="white_color" style="font-size: 70px;"><%=temp%>°C</h1>
+            <div style="display: flex;" class="mt-4">
+                <img style="width: 25px; height: 25px;" src="../img/icons/location.png" alt="location_icon">
+                <p style="padding-left: 5px;" class="white_color"><%=location%></p>
+            </div>
+        </div>
+        <div class="d-none d-lg-block clock_div">
+            <p class="clock white_color" id="time1"></p>
+        </div>
+        <div class="d-none d-lg-block date_div">
+            <p class="white_color" id="date1"></p>
+        </div>
+        <div class="right_div d-none d-lg-block">
+            <div style="display: flex;">
+                <img style="width: 40px; height: 40px;" src="../img/icons/humidity.png" alt="humidity">
+                <p style="padding-left: 10px;" class="white_color">Humidity</p>
+            </div>
+            <h4 style="margin-left: 50px; margin-bottom: 30px;" class="white_color"><%=humidity%>%</h4>
+            <div style="display: flex;">
+                <img style="width: 40px; height: 40px;" src="../img/icons/airpressure.png" alt="air pressure">
+                <p style="padding-left: 10px;" class="white_color">Air Pressure</p>
+            </div>
+            <h4 style="margin-left: 50px; margin-bottom: 30px;" class="white_color"><%=air_pressure%> PS</h4>
+            <div style="display: flex;">
+                <img style="width: 40px; height: 40px;" src="../img/icons/windspeed.png" alt="wind speed">
+                <p style="padding-left: 10px;" class="white_color">Wind Speed</p>
+            </div>
+            <h4 style="margin-left: 50px; margin-bottom: 30px;" class="white_color"><%=wind_speed%>km/h</h4>
+        </div>
+
+        <!-- Mobile and Tablet -->
+        <div class="date_time_div d-block d-lg-none">
+            <div class="justify-content-center" style="display: flex;">
+                <p class="date_time_text white_color" id="time2"></p>
+                <p class="date_time_text white_color" id="date2"></p>
+            </div>
+        </div>
+        <div class="d-block d-lg-none container">
+            <h1 class="temp white_color"><%=temp%>°</h1>
+            <h2 class="description white_color"><%=description%></h2>
+            <div style="display: flex;" class="justify-content-center mt-4">
+                <img style="width: 25px; height: 25px;" src="../img/icons/location.png" alt="location_icon">
+                <p style="padding-left: 5px;" class="white_color"><%=location%></p>
+            </div>
+        </div>
+        <div class="d-lg-none centered_h_a_w_div">
+            <div class="row">
+                <div class="col-4 white_color">
+                    <img class="small_icon_left sm_icon_size" src="../img/icons/humidity.png" alt="humidity">
+                    <p class="small_content_left small_weather_value"><%=humidity%>%</p>
+                    <p class="small_content_left small_weather_content">Humidty</p>
+                </div>
+                <div class="col-4 white_color">
+                    <img class="small_icon_middle sm_icon_size" src="../img/icons/airpressure.png" alt="air pressure">
+                    <p class="small_content_middle small_weather_value"><%=air_pressure%> PS</p>
+                    <p class="small_content_middle small_weather_content">Air Pressure</p>
+                </div>
+                <div class="col-4 white_color">
+                    <img class="small_icon_right sm_icon_size" src="../img/icons/windspeed.png" alt="wind speed">
+                    <p class="small_content_right small_weather_value"><%=wind_speed%>km/h</p>
+                    <p class="small_content_right small_weather_content">Wind Speed</p>
+                </div>
+            </div>
+        </div>
+        <div class="aqi_div">
+            <div><h3 class="white_color">AQI : <%=aqi%></h3></div>
+            <div style="display: flex;" class="justify-content-center">
+                <div class="m-2 white_color"><p class="aqi_value_font">O3 : <%=o3%> μg/m3</p></div>
+                <div class="m-2 white_color"><p class="aqi_value_font">CO : <%=co%> μg/m3</p></div>
+                <div class="m-2 white_color"><p class="aqi_value_font">NO2 : <%=no2%> μg/m3</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For All  -->
+    <section class="logo_div text-center">
+        <div style="justify-content: center; display: flex;">
+            <img class="logo_img" src="../img/logo.png" alt="logo_img">
+            <h2 class="p-2 white_color">Weather Forecast 1.0</h2>
+        </div>
+        <div style="text-align: center;">
+            <p class="white_color">CopyRight 2023, Devloped by Vaibhav Umbarkar</p>
+        </div>
+    </section>
+
+    <!-- Script for Date and Time -->
+    <script src="script/date_time.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,308 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.white_color{
+    color: white;
+}
+
+
+/* Computer */
+.bg_design{
+    background: rgba(0, 0, 0, 0.582);
+    backdrop-filter: saturate(180%) blur(5px);
+    width: 100%; 
+    height: 70vh; 
+    border-radius: 0px 0px 40px 40px;
+}
+
+.lg_navbar_div{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 50px;
+    border-radius: 0px 0px 20px 20px;
+    background: rgba(0, 0, 0, 0.277);
+}
+
+.lg_menu{
+    text-decoration: none;
+    font-size: 25px;
+    padding: 20px;
+    color: white;
+}
+
+.lg_menu:hover{
+    color: rgb(210, 210, 210);
+}
+
+.search_bar{
+    width: 400px;
+    border-radius: 50px;
+    height: 50px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    text-align: center;
+    color: grey;
+}
+
+.msg_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.aqi_div{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left_div{
+    position: absolute;
+    top: 52%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.right_div{
+    position: absolute;
+    top: 54%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.weather_icon{
+    width: 70px;
+    height: 70px;
+}
+
+.clock_div{
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock
+{
+    font-size: 50px;
+}
+
+.date_div
+{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo_div{
+    margin-top: 130px;
+}
+
+.logo_img{
+    width: 50px; 
+    height: 50px;
+}
+
+
+/* sm */
+.centered_h_a_w_div {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 345px;
+    height: 87px;
+    border-radius: 50px;
+    background: rgba(0, 0, 0, 0.17);
+}
+
+
+/* Meadia Q for Mobile */
+@media (max-width: 768px)
+{
+    .search_bar{
+        width: 300px;
+        height: 40px;
+        top: 7%;
+    }
+
+    .msg_div{
+        top: 14%;
+    }
+
+    .temp{
+        font-size: 80px;
+    }
+
+    .description{
+        font-size: 20px;
+    }
+
+    .date_time_div{
+        padding-top: 90px;
+    }
+
+    .date_time_text{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .small_weather_value{
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+    }
+
+    .small_weather_content{
+        font-size: 11px;
+    }
+
+    .sm_icon_size{
+        width: 22px;
+        height: 22px;
+    }
+
+    .small_icon_left{
+        margin: 10px 0px 0px 40px;
+    }
+
+    .small_icon_middle{
+        margin-top: 10px;
+    }
+    
+    .small_icon_right{
+        margin: 10px 40px 0px 0px;
+    }
+
+    
+    .small_content_left{
+        margin-left: 40px;
+    }
+
+    .small_content_right{
+        margin-right: 40px;
+    }
+
+    .aqi_value_font{
+        font-size: 12px;
+    }
+
+    .aqi_div{
+        width: 100%;
+        top: 90%;
+    }
+
+    .logo_div{
+        margin-top: 150px;
+    }
+}
+
+/* Meadia Q for Tablet */
+@media (min-width: 768px) and (max-width: 991.98px) 
+{
+    .bg_design{
+        height: 820px;
+    }
+
+    .search_bar{
+        width: 500px;
+        height: 50px;
+        top: 7%;
+    }
+
+    .msg_div{
+        top: 13%;
+    }
+
+    .temp{
+        font-size: 130px;
+    }
+
+    .description{
+        font-size: 30px;
+    }
+
+    .date_time_div{
+        padding-top: 120px;
+    }
+
+    .date_time_text{
+        font-size: 25px;
+        padding: 5px;
+    }
+
+    .centered_h_a_w_div {
+        top: 70%;
+        width: 500px;
+        height: 100px;
+
+    }
+
+    .sm_icon_size{
+        width: 30px;
+        height: 30px;
+    }
+
+    .small_icon_left{
+        margin: 10px 0px 0px 60px;
+    }
+
+    .small_icon_middle{
+        margin-top: 10px;
+    }
+    
+    .small_icon_right{
+        margin: 10px 60px 0px 0px;
+    }
+
+    .small_content_left{
+        margin: 0px 0px 0px 60px;
+    }
+
+    .small_content_middle{
+        padding-bottom: 0;
+        margin-bottom: 0;        
+    }
+
+    .small_content_right{
+        margin: 0px 60px 0px 0px;
+    }
+
+    .aqi_value_font{
+        font-size: 19px;
+    }
+
+    .aqi_div{
+        width: 100%;
+        top: 90%;
+    }
+
+    .logo_div{
+        margin-top: 250px;
+    }
+    
+}

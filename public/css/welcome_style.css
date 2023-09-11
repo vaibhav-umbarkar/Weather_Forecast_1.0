@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('../img/bg-1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.bg_design{
+    background: rgba(0, 0, 0, 0.653);
+    width: 100%; 
+    height: 100vh; 
+}
+
+.cover_div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.logo_img{
+    width: 100px; 
+    height: 100px;
+}
+
+.logo_title{
+    font-size: 50px;
+}
+
+#get_start{
+    border-radius: 50px; 
+    width: 200px; 
+    font-size: 25px;
+}
+
+#get_start:hover{
+    background-color: rgb(210, 210, 210);
+}
