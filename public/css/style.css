@@ -217,7 +217,12 @@ body{
     }
 
     .logo_div{
-        margin-top: 130px;
+        position: absolute;
+        top: 76%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        /* margin-top: 130px; */
     }
 }
 
