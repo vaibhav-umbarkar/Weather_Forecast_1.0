@@ -73,6 +73,23 @@ app.get('/', async(req, res) => {
         {
             // Handle internet connection issue
             console.log('Please check the internet connection!');
+
+            //Set value if location are not found (Weather)
+            location_name = 'NA';
+            temp='NA';
+            description = 'NA';
+            humidity = 'NA';
+            air_pressure = 'NA'; 
+            wind_speed = 'NA';
+            icon_url = 'NA'
+
+            //Set value if location are not found (AQI)
+            aqi='NA';
+            aqi_text='NA'; 
+            o3='NA'; 
+            co='NA';
+            no2='NA';
+
         }
 
         else if(error.code === 'ERR_BAD_REQUEST')
@@ -80,6 +97,7 @@ app.get('/', async(req, res) => {
             msg = "Location Not Found!";
 
             //Set value if location are not found (Weather)
+            location_name = 'NA';
             temp='NA';
             description = 'NA';
             humidity = 'NA';
@@ -138,6 +156,23 @@ app.post('/submit', async(req, res) => {
         {
             // Handle internet connection issue
             console.log('Please check the internet connection!');
+
+            //Set value if location are not found (Weather)
+            location_name = 'NA';
+            temp='NA';
+            description = 'NA';
+            humidity = 'NA';
+            air_pressure = 'NA'; 
+            wind_speed = 'NA';
+            icon_url = 'NA'
+
+            //Set value if location are not found (AQI)
+            aqi='NA';
+            aqi_text='NA'; 
+            o3='NA'; 
+            co='NA';
+            no2='NA';
+
         }
 
         else if(error.code === 'ERR_BAD_REQUEST')
@@ -145,6 +180,7 @@ app.post('/submit', async(req, res) => {
             msg = "Location Not Found!";
 
             //Set value if location are not found (Weather)
+            location_name = 'NA';
             temp='NA';
             description = 'NA';
             humidity = 'NA';
