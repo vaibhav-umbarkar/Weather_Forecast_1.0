@@ -256,6 +256,10 @@ app.get('/home', (req, res) => {
     });
 })
 
+app.get("/help", (req, res) => {
+    res.render('help');
+});
+
 //Page Not Found
 app.get('/error', (req, res) => {
     res.render('error_404');
