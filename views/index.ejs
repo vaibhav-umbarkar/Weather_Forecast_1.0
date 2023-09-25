@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/navbar.css">
 
-
     <!-- Bootstrap 5 mini CDN Link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -94,14 +93,17 @@
                 <p class="date_time_text white_color" id="date2"></p>
             </div>
         </div>
+        
         <div class="d-block d-lg-none container">
-            <h1 class="temp white_color"><%=temp%>°</h1>
+            <img class="weather_icon" src="<%=icon%>" alt="weather_icon" onerror="this.style.display='none'">
             <h2 class="description white_color"><%=description%></h2>
+            <h1 class="temp white_color"><%=temp%>°</h1>
             <div style="display: flex;" class="justify-content-center mt-4">
                 <img style="width: 25px; height: 25px;" src="../img/icons/location.png" alt="location_icon">
                 <p style="padding-left: 5px;" class="white_color"><%=location%></p>
             </div>
         </div>
+        
         <div class="d-lg-none centered_h_a_w_div">
             <div class="row">
                 <div class="col-4 white_color">

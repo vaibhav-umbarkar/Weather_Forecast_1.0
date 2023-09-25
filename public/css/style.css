@@ -156,12 +156,17 @@ body{
         top: 7%;
     }
 
+    .weather_icon{
+        width: 50px;
+        height: 50px;
+    }
+
     .msg_div{
         top: 14%;
     }
 
     .temp{
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .description{
@@ -240,12 +245,17 @@ body{
         top: 7%;
     }
 
+    .weather_icon{
+        width: 110px;
+        height: 110px;
+    }
+
     .msg_div{
         top: 13%;
     }
 
     .temp{
-        font-size: 130px;
+        font-size: 90px;
     }
 
     .description{
