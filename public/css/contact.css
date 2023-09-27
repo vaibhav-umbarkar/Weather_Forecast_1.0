@@ -28,5 +28,15 @@ body{
     position: absolute;
     bottom: 0%;
     width: 100%;
+    text-align: center;
+}
+
+.icons_div{
+    justify-content: center;
     display: flex;
+}
+
+.icons{
+    font-size: 20px;
+    color: black;
 }
