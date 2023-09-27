@@ -256,8 +256,8 @@ app.get('/home', (req, res) => {
     });
 })
 
-app.get("/help", (req, res) => {
-    res.render('help');
+app.get("/contact", (req, res) => {
+    res.render('contact');
 });
 
 //Page Not Found

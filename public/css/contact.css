@@ -1,11 +1,10 @@
-/* For Global */
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 }
 
 body{
-    background-image: url('../img/bg_img.jpg');
+    background-image: url("../img/bg_img.jpg");
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
@@ -15,29 +14,19 @@ body{
 }
 
 .main_div{
-    background: rgba(0, 0, 0, 0.336);
     position: absolute;
-    top: 50%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 650px;
-    text-align: center;
-    border-radius: 15px;
+    width: 350px;
+    height: 580px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.336);
 }
 
-
-/* For Mobile */
-@media (max-width: 768px)
-{
-    .main_div{
-        height: 800px;
-        width: 350px;
-    }
-}
-
-/* For Tablet */
-@media (min-width: 768px) and (max-width: 1024px){
-    .main_div{
-        height: 1080px;
-    }
+.footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    display: flex;
 }
