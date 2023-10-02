@@ -1,0 +1,40 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    background-image: url("../img/bg_img.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.go-back{
+    padding: 15px 0px 0px 5px;
+}
+
+.para{
+    padding: 5px;
+}
+
+.footer{
+    text-align: center;
+    position: absolute;
+    bottom: 0%;
+}
+
+.icons_div{
+    justify-content: center;
+    display: flex;
+}
+
+.icons{
+    font-size: 30px;
+    color: black;
+    padding: 0px 9px 5px 9px;
+    margin-bottom: 20px;
+}
