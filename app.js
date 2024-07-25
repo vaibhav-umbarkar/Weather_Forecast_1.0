@@ -3,6 +3,9 @@ import express  from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
 
+// credentials
+var key='your_app_id' //Put your app id here
+
 //set express
 const app = express();
 
@@ -48,7 +51,7 @@ app.get('/', async(req, res) => {
         weather_obj = await axios.get(url1);
 
         //AQI Data found, process data
-        url2 = 'https://api.openweathermap.org/data/2.5/air_pollution?lat='+ weather_obj.data.coord.lat +'&lon=' + weather_obj.data.coord.lon + '&appid=12373943e2d014434396e51558183738';
+        url2 = 'https://api.openweathermap.org/data/2.5/air_pollution?lat='+ weather_obj.data.coord.lat +'&lon=' + weather_obj.data.coord.lon + '&appid=' + key;
         aqi_obj = await axios.get(url2);
 
         //Declare into Variable (Weather) 
@@ -130,7 +133,7 @@ app.post('/submit', async(req, res) => {
         url1 = 'https://api.openweathermap.org/data/2.5/weather?appid=12373943e2d014434396e51558183738&q='+ req.body.location +'&units=metric';
         weather_obj = await axios.get(url1);
 
-        url2 = 'https://api.openweathermap.org/data/2.5/air_pollution?lat='+ weather_obj.data.coord.lat +'&lon=' + weather_obj.data.coord.lon + '&appid=12373943e2d014434396e51558183738';
+        url2 = 'https://api.openweathermap.org/data/2.5/air_pollution?lat='+ weather_obj.data.coord.lat +'&lon=' + weather_obj.data.coord.lon + '&appid=' + appid;
         aqi_obj = await axios.get(url2);
 
         msg="";
@@ -272,6 +275,6 @@ app.get('/error', (req, res) => {
 //Local Port 3000
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    // console.log(`Server Running at : http://localhost:${port}`);
+    console.log(`Server Running at : http://localhost:${port}`);
     console.log("Server is Online...");
 });
